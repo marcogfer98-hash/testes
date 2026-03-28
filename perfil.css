@@ -1,0 +1,322 @@
+:root {
+    --primary-color: rgb(95, 92, 92);
+    --secondary-color: rgb(55, 53, 53);
+    --bg-primary-color: #e1e3e4;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: var(--bg-primary-color);
+}
+
+.h-area {
+    background-image: linear-gradient(145deg, var(--secondary-color), var(--primary-color));
+    height: 23rem;
+}
+
+.menu-area ul {
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 1.4rem;
+    color: #fff;
+
+
+}
+
+
+
+ul li {
+    margin-top: 10px;
+    cursor: pointer;
+
+
+}
+
+.foto {
+    width: 100px;
+    height: 100px;
+    border: 5px solid #c8c4c4;
+    margin: 10px;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 20px;
+    background-image: url(images/Captura\ de\ tela\ 2026-02-14\ 011217.png);
+    background-size: cover;
+    background-position-y: -30px;
+    background-repeat: no-repeat;
+}
+
+.apresenta {
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.apresenta p {
+    font-size: 1.5rem;
+    padding-top: 5px;
+}
+
+.black,
+.eu,
+.ctt {
+    border: 2px solid #ccc;
+    padding: 50px;
+    margin: auto;
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+.pri {
+    padding-bottom: 10px;
+}
+
+.sobre {
+    font-size: 1.5rem;
+}
+
+.sobre,
+.contact h2 {
+    font-size: 1.7rem;
+}
+
+.sobre h3 {
+    padding-bottom: 10px;
+}
+
+.skills {
+    font-size: 1.5rem;
+}
+
+
+
+.black,
+.eu,
+.ctt,
+a {
+    background-color: rgb(55, 53, 53);
+    border-radius: 8px;
+    color: #fff;
+}
+
+.black legend {
+    color: white;
+}
+
+.contato img {
+    width: 30px;
+
+}
+
+.contact h3 {
+    font-size: 1.5rem;
+}
+
+.icon-tel,
+.icon-em,
+.icon-lik,
+.icon-g,
+.loc {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.icon-tel,
+.icon-em,
+.icon-lik,
+.icon-g,
+.loc p,
+a {
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+#ti {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.skil-grid img {
+    width: 90px;
+
+}
+
+
+
+.skil-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+
+
+.skil-grid p {
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+.html-icon,
+.css-icon,
+.js-icon,
+.cc-icon {
+    border-bottom: 2px solid rgb(252, 252, 252);
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    margin: auto;
+    margin-top: 30px;
+    background-color: rgb(91, 89, 89);
+
+}
+
+.sql-icon {
+    border-bottom: 2px solid rgb(252, 252, 252);
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    margin: auto;
+    margin-top: 30px;
+    background-color: rgb(91, 89, 89);
+}
+
+.html-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 1px 10px 10px #fff;
+}
+
+.css-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 1px 10px 10px #fff;
+}
+
+.js-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 1px 10px 10px #fff;
+}
+
+.cc-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 1px 10px 10px #fff;
+}
+
+.sql-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 1px 10px 10px #fff;
+}
+
+.html-icon {
+    background-image: url(images/html-5.png);
+    background-size: cover;
+
+}
+
+.css-icon {
+    background-image: url(images/css-3.png);
+    background-size: cover;
+}
+
+.js-icon {
+    background-image: url(images/script-java.png);
+    background-size: cover;
+}
+
+.cc-icon {
+    background-image: url(images/ccc.png);
+    background-size: cover;
+}
+
+.sql-icon {
+    background-image: url(images/servidor-sql.png);
+    background-size: cover;
+}
+
+.lang {
+    margin-top: 50px;
+}
+
+@media(width>700px) {
+
+    .apresenta {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-top: 15px;
+    }
+
+    .txt {
+        margin-right: 200px;
+        font-size: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+
+    .skil-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin: auto;
+        padding-bottom: 10px;
+    }
+
+
+}
+
+@media(width>1000px) {
+
+    .apresenta {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-top: 15px;
+        justify-content: flex-start;
+    }
+
+    .txt {
+        margin-right: 500px;
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+
+
+    .skil-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin: auto;
+        padding-bottom: 10px;
+    }
+
+
+}

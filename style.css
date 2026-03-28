@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-bg-color: #f0f0f0;
+    --main-bg-light: #fff;
+    --main-text-color: #333;
+    --main-text-light: #ccc;
+    --primary-color: #007bff;
+    --secondary-color: #003670;
+    --light-color: #fff;
+    --font-family: arial, sans-serif;
+    --header-height: 60px;
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.5rem;
+    font-family: var(--font-family);
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--header-height);
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 1.5);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--light-color);
+    padding: 8px 16px;
+}
+
+nav a:hover {
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    transition: all 0.5s ease;
+}
+
+.menu-hide {
+    display: none;
+}
+
+main {
+    padding: 20px;
+    margin: auto;
+    max-width: 1200px;
+}
+
+.hero {
+    background-image: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: var(--light-color);
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 8px;
+
+}
+
+.hero h1 {
+    padding-bottom: 20px;
+}
+
+.hero .cta {
+    display: block;
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 400px;
+    align-items: center;
+    margin: 20px auto 0 auto;
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.cta:hover {
+    background-color: var(--primary-color);
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.07);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+h2 {
+    padding-bottom: 20px;
+}
+
+.sobre,
+.service,
+.portfolio,
+.contato {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.sobre {
+    border-bottom: 1px solid var(--main-text-light);
+}
+
+.sobre p {
+    padding-bottom: 10px;
+    max-width: 600px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.sobre img {
+    max-width: 100%;
+    width: 400px;
+    padding-bottom: 15px;
+    border-radius: 8px;
+}
+
+.service-area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.service-item {
+    flex: 1;
+    background-color: var(--main-bg-light);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    font-size: 4rem;
+}
+
+.service-item,
+h3,
+p {
+    padding-bottom: 1rem;
+
+}
+
+
+.service-item:hover {
+    transform: scale(1.08);
+    transition: all 0.4s ease;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.grid-item img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.grid-item img:hover {
+    transform: scale(1.05);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+    margin: auto;
+}
+
+form label {
+    text-align: left;
+}
+
+form input,
+textarea {
+    border: 1px solid var(--main-text-light);
+    color: var(--main-text-color);
+    border-radius: 8px;
+    padding: 10px;
+
+}
+
+button {
+    padding: 10px;
+    border: 1px solid var(--main-text-light);
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    transform: scale(1.05);
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+
+
+@media(width>700px) {
+    .menu-hide {
+        display: block;
+    }
+
+    .service-area {
+        flex-direction: row;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+
+}
