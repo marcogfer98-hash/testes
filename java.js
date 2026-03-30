@@ -1,8 +1,17 @@
-let a, b, c;
-let saida = document.getElementById("saida");
+let saida = document.querySelector(".saida");
 
-a = 10;
-b = 10;
-c = 11;
+let nome = prompt("Digite o login: ");
+let password = parseInt(prompt("Digite a senha: "));
 
-saida.innerHTML = "Menor = " + (a < b) + "<br>Menor ou Igual = " + (a <= b) + "<br>Maior = " + (c > b) + "<br>Maior ou Igual = " + (c >= b);
+let admin = "Admin";
+let senha = 123;
+
+if (nome + password != admin + senha) {
+    alert("Acesso Negado!");
+} else {
+    saida.innerHTML = "Acesso para Administrador Liberado!";
+}
+
+
+
+
