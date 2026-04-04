@@ -1,11 +1,11 @@
 let saida = document.querySelector(".saida");
 
-function somar(a, b) {
-    let resultado = a * b;
-    return resultado;
+let nomes = (["Marco", "Luffy", "Usopp", "Nami"]);
 
-}
+let idade = (["27", "22", "21", "20"]);
 
-let result = somar(9, 7);
-
-console.log(result);
+console.log(nomes[3]);
+console.log(idade[3]);
+nomes.push("Sanji");
+console.log(nomes);
+console.log(nomes.length);

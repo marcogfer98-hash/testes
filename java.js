@@ -1,17 +1,14 @@
-let saida = document.querySelector(".saida");
+function clicou() {
+    let title = document.querySelector(".titulo");
+    let input = document.querySelector(".campo");
 
-let nome = prompt("Digite o login: ");
-let password = parseInt(prompt("Digite a senha: "));
-
-let admin = "Admin";
-let senha = 123;
-
-if (nome + password != admin + senha) {
-    alert("Acesso Negado!");
-} else {
-    saida.innerHTML = "Acesso para Administrador Liberado!";
+    if (input.value != "") {
+        title.innerHTML = "Olá, " + input.value;
+        input.value = "";
+    } else {
+        alert("Preencha o seu nome.");
+    }
 }
 
-
-
-
+let button = document.querySelector("button");
+button.addEventListener("click", clicou);
