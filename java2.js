@@ -1,10 +1,100 @@
-let saida = document.querySelector(".saida");
+let display = document.querySelector("#display");
 
-let numero = parseInt(prompt("Digite um numero: "));
+let firstValue = "";
+let secondValue = "";
+let operator = "";
+let currentValue = 1;
+
+function reset() {
+    firstValue = "";
+    secondValue = "";
+    operator = "";
+    currentValue = 1;
+}
 
 
+function clicked(button) {
+    console.log(button);
+    switch (button) {
+        case 'c':
+            reset();
+            break;
 
+        case '÷':
+        case '×':
+        case '-':
+        case '+':
+            if (firstValue !== '') {
+                operator = button;
+                currentValue = 2;
+            }
+            break;
 
-for (let count = 1; count <= 10; count++) {
-    saida.innerHTML += "<br>" + numero + " x " + count + " = " + (numero * count);
+        case '.':
+            if (currentValue === 1 && firstValue !== '' && !firstValue.includes('.')) {
+                firstValue += '.';
+            }
+            if (currentValue === 2 && secondValue !== '' && !secondValue.includes('.')) {
+                secondValue += '.';
+            }
+            break;
+
+        case '0':
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+        case '5':
+        case '6':
+        case '7':
+        case '8':
+        case '9':
+            if (currentValue === 1) {
+                firstValue += button;
+            }
+            if (currentValue === 2) {
+                secondValue += button;
+            }
+            break;
+
+        case '=':
+            if (currentValue === 2 && secondValue != '') {
+                let result = calculate(firstValue, operator, secondValue);
+                reset();
+                firstValue = result;
+            }
+            break;
+    }
+
+    updateDisplay();
+}
+
+function updateDisplay() {
+    if (firstValue === '') {
+        display.innerHTML = 0;
+    } else {
+        display.innerHTML = firstValue + operator + secondValue;
+    }
+}
+
+function calculate(first, ope, second) {
+    first = parseFloat(first);
+    second = parseFloat(second);
+
+    switch (ope) {
+        case '÷':
+            return first / second;
+            break;
+        case '×':
+            return first * second;
+            break;
+        case '-':
+            return first - second;
+            break;
+        case '+':
+            return first + second;
+            break;
+        default:
+            return 0;
+    }
 }
